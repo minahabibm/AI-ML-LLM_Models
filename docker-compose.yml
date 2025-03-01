@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  jupyter:
+    build: .  # Build the Docker image using the Dockerfile
+    container_name: ai-ml-llm-jupyter
+    ports:
+      - "8888:8888"  # Map the Jupyter port
+    volumes:
+      - ./notebooks:/home/jovyan/work  # Mount your local notebooks folder to the container
+    environment:
+      - JUPYTER_ENABLE_LAB=yes  # Optional: Enable JupyterLab interface
+    networks:
+      - ai-ml-network
+
+networks:
+  ai-ml-network:
+    driver: bridge
