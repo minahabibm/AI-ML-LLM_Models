@@ -13,3 +13,4 @@ dependencies:
   - seaborn
   - pip:
     - transformers  # If you're working with LLMs like HuggingFace
+    - kaggle
