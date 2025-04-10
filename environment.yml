@@ -2,6 +2,7 @@ name: ai-ml-llm-env  # The name of the Conda environment
 channels:
   - defaults
   - pytorch  # Add the PyTorch channel
+  - conda-forge
 dependencies:
   - python=3.8
   - pytorch
@@ -12,6 +13,8 @@ dependencies:
   - matplotlib
   - scikit-learn
   - seaborn
+  - gym
   - pip:
     - transformers  # If you're working with LLMs like HuggingFace
     - kaggle
+    - pygame
